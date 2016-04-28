@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+	padding: 0;
+	margin: 0;
+	background-image: url(Images/Dark%20Wood%20Background.jpg) repeat-x repeat-y;
+}
+* {
+	font-size: 1em;
+	font-family: "Bitter", "Trebuchet MS", Helvetica;	
+}
+/*Mobile/Tablet Styling*/
+
+/*Images*/
+.icon {
+	display: inline-block;
+	width: 3.5%;
+	height: auto;
+	fill: currentColor;
+}
+.bannerImage {
+	width: 100%;
+	height: auto;	
+}
+.thumbnailImages {
+	width: 32%;
+	display: block;
+	float: left;
+	clear: right;
+	margin: 0.5%;
+}
+.thumbnailImages-Wide {
+	width: 64%;
+	height: auto;
+	display: block;
+	float: left;
+	margin: 0.5%;
+}
+/*Transform Controls*/
+.thumbnailImageHolder:hover img {
+	opacity: .25;
+transform: scale(.75);
+-webkit-transform: scale(.75);
+-moz-transform: scale(.75);
+-ms-transform: scale(.75);
+-o-transform: scale(.75);
+}
+.thumbnailImageHolder img:hover {
+opacity: 1;
+border: 2px solid #f1f1f1;
+transform: scale(1);
+-webkit-transform: scale(1);
+-moz-transform: scale(1);
+-ms-transform: scale(1);
+-o-transform: scale(1);
+    /*-webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0);
+    transform: translateZ(0);*/
+}
+.thumbnailImageHolder img {
+	transition: transform .25s ease;
+	-webkit-transition: transform .25s ease;
+	-moz-transition: transform .25s ease;
+	-ms-transition: transform .25s ease;
+	-o-	transition: transform .25s ease;
+}
+/*Transform Controls Ends/*
+/*Images Ends*/
+
+#header {
+	background-color: #5d5d5d;
+	width: 100%;
+	height: auto;
+	opacity: 0.9;
+	position: fixed;
+	z-index: 10;
+}
+
+/*Containers*/
+#contentHolder {
+	width: 80%;
+	height: 100%;
+	margin-left: 15%;
+	display: inline-block;	
+}
+#banner {
+	width: 100%;
+	height: auto;	
+}
+/*Containers Ends*/
+/*NAVBAR BEGINS*/
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 11; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #3d3d3d; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+	transition: margin-left .5s;
+	padding: 0px;
+	background-image: url(Images/darkWoodBackground.jpg);
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/*Navbar Ends*/
+
+/*Column Styles*/
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { 
+	margin-left: 0; 
+}
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+	width: 85%;
+	float: none;
+}
+.span_2_of_3 {
+	width: 66.1%;
+}
+.span_1_of_3 {
+	width: 29%;
+	padding: 0% 1% 0% 1%;
+}
+/*GRID OF TWO*/
+.span_1_of_2 {
+	width: 40%;	
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		 margin: 1% 0 1% 0%;
+		 }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { 
+		width: 100%; 
+	}
+}
+/*Column Ends*/
