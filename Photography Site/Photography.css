@@ -3,7 +3,12 @@
 html, body {
 	padding: 0;
 	margin: 0;
-	background-image: url(Images/Dark%20Wood%20Background.jpg) repeat-x repeat-y;
+	background-image: url(Images/darkWoodBackground.jpg);
+	background-position: center center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 * {
 	font-size: 1em;
@@ -14,7 +19,7 @@ html, body {
 /*Images*/
 .icon {
 	display: inline-block;
-	width: 3.5%;
+	width: 75px;
 	height: auto;
 	fill: currentColor;
 }
@@ -23,18 +28,16 @@ html, body {
 	height: auto;	
 }
 .thumbnailImages {
-	width: 32%;
+	width: 100%;
 	display: block;
 	float: left;
 	clear: right;
 	margin: 0.5%;
+	border: 1px solid #3d3d3d;
 }
-.thumbnailImages-Wide {
-	width: 64%;
-	height: auto;
-	display: block;
-	float: left;
-	margin: 0.5%;
+#gallery {
+	width: 80%;
+	margin-left: 15%;	
 }
 /*Transform Controls*/
 .thumbnailImageHolder:hover img {
@@ -131,7 +134,6 @@ transform: scale(1);
 #main {
 	transition: margin-left .5s;
 	padding: 0px;
-	background-image: url(Images/darkWoodBackground.jpg);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -146,7 +148,7 @@ transform: scale(1);
 .col {
 	display: block;
 	float:left;
-	margin: 1% 0 1% 1.6%;
+	margin: 1% 0 1% 0.5%;
 }
 .col:first-child { 
 	margin-left: 0; 
@@ -176,7 +178,6 @@ transform: scale(1);
 }
 .span_1_of_3 {
 	width: 29%;
-	padding: 0% 1% 0% 1%;
 }
 /*GRID OF TWO*/
 .span_1_of_2 {
@@ -194,3 +195,25 @@ transform: scale(1);
 	}
 }
 /*Column Ends*/
+
+/*Upload box*/
+/* layout.css Style */
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+/*Upload box ends*/
