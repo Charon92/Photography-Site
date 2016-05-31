@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+/*CSS File For Sign-In webpage*/ 
+* {
+	font-size: 1em;
+	font-family: "Bitter", "Trebuchet MS", Helvetica;	
+}
+html body {
+	margin: 0;
+	padding: 0;	
+}
+#body-color{ 
+	background-image: url(Images/darkWoodBackground.jpg);
+	background-position: center center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} 
+#Sign-In { 
+	margin-left: 35%;
+	margin-top: 20%;
+	padding: 8px 25px; 
+	background:#2d2d2d;
+	opacity: 0.9;
+	color: #ffffff; 
+	width: 30%; 
+	height: 200px; 
+} 
+#Sign-In input {
+	width: 80%;	
+}
+#button {  
+	width: 20%; 
+	height: 100%; 
+	background:#f0f0f0;
+	margin-top: 3%;
+}
+@media screen and (max-width: 550px){
+	#Sign-In {
+		width: 90%;
+		margin-top: 50%;
+		margin-left: 0%;
+	}
+}
+@media screen and (max-width: 800px) {
+	#Sign-In {
+		width: 80%;
+		margin-top: 25%;
+		margin-left: 20%;	
+}
